@@ -9,7 +9,7 @@ import {StoreProvider} from 'iflux2';
 import AppStore from './store';
 
 //import { Button } from 'antd-mobile';
-import AntdMobile from 'antd-mobile';
+//import AntdMobile from 'antd-mobile';
 import Button from 'antd-mobile/lib/button';
 
 //debug: true, it will show good logs
@@ -30,7 +30,12 @@ export default class AntUIApp extends React.Component {
 
                 <hr/>
 
-                <Button>AntUI</Button>
+                <Button onClick={()=>{
+                    console.log(`AntUI click...`);
+                    //Toast.info('AntUI click', 1);
+                    //Toast.info('This is a toast tips !!!', 1);
+                    alert('AntUI click');
+                }}>AntUI</Button>
             </div>
         );
     }
